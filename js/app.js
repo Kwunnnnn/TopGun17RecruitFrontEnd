@@ -47,7 +47,7 @@
                 $scope.questions[i].solved = false;
                 if(typeof $scope.questions[i].user_id_solved !== 'undefined'){
                     for(var j = 0; j < $scope.questions[i].user_id_solved.length; ++j){
-                        if(user_id === $scope.questions[i].user_id_solved[j] ){
+                        if(user_id == $scope.questions[i].user_id_solved[j] ){
                             $scope.questions[i].solved = true;
                         }
                     }
