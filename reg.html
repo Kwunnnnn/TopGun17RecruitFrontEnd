@@ -3,19 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register</title>
 
     <!-- import bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-    <script src="js/reg.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
     <link rel="stylesheet"href="css/setting.css">
 </head>
 
-<body>
+<body ng-app = "myApp" ng-controller="RegController" >
 <form>
         <!--form register-->
     <div class="container">
@@ -27,17 +24,17 @@
     <h1 style="font-size: 60px;text-align: center;margin-top: 10%">ลงทะเบียน</h1>
     <div class="form-group">
         <label style="font-size: 25px" class="col-form-label" for="userID_text">รหัสนักศึกษา</label>
-        <input style="font-size: 25px" type="number" class="form-control" id="userID_text" placeholder="รหัสนักศึกษา">
+        <input id="stdID" style="font-size: 25px" type="number" ng-model="stdID" class="form-control" id="userID_text" placeholder="รหัสนักศึกษา">
     </div>
     <div class="form-group">
         <label style="font-size: 25px" class="col-form-label" for="firstname_text">ชื่อ</label>
-        <input style="font-size: 25px" type="text" class="form-control" id="firstname_text" placeholder="ชื่อ">
+        <input id="stdFirstName" style="font-size: 25px" type="text" ng-model="stdFirstname" class="form-control" id="firstname_text" placeholder="ชื่อ">
     </div>
     <div class="form-group">
         <label style="font-size: 25px" class="col-form-label" for="lastname_text">นามสกุล</label>
-        <input style="font-size: 25px" type="text" class="form-control" id="lastname_text" placeholder="นามสกุล">
+        <input id="stdLastName" style="font-size: 25px" type="text" ng-model="stdLastname" class="form-control" id="lastname_text" placeholder="นามสกุล">
     </div>
-        <button onclick="getElements()" type="button" class="btn btn-primary btn-sm" style="margin-top: 5%;font-size: 25px">ยืนยัน</button>
+        <button ng-click="sendREG()" type="button" class="btn btn-primary btn-sm" style="margin-top: 5%;font-size: 25px">ยืนยัน</button>
             </div>
             <div class="col">
             </div>
