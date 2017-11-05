@@ -5,8 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/setting.css">
+
+    <!-- Scrip importing -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
 </head>
-<body>
+<body ng-app = "myApp" ng-controller="LoginController" >
 
 <div class="container">
     <div class="row">
@@ -18,12 +23,9 @@
                 <div class="form-group">
                     <h1 style="font-size: 60px;text-align: center">เข้าสู่ระบบ</h1>
                     <label style="font-size: 40px;margin-top: 5%" for="userID">รหัสนักศึกษา</label>
-                    <input style="font-size: 30px" type="number" class="form-control" id="userID"  placeholder="รหัสนักศึกษา">
-
+                    <input style="font-size: 30px" ng-model="userID" type="number" class="form-control" id="userID"  placeholder="รหัสนักศึกษา">
                 </div>
-
-
-                <center><button style="font-size: 25px" type="login" class="btn btn-primary">เข้าสู่ระบบ</button></center>
+                <center><button ng-click="login()" style="font-size: 25px" type="login" class="btn btn-primary">เข้าสู่ระบบ</button></center>
             </form>
 
 

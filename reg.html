@@ -8,8 +8,8 @@
     <!-- import bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/setting.css">
     <script src="js/app.js"></script>
-    <link rel="stylesheet"href="css/setting.css">
 </head>
 
 <body ng-app = "myApp" ng-controller="RegController" >
@@ -24,15 +24,15 @@
     <h1 style="font-size: 60px;text-align: center;margin-top: 10%">ลงทะเบียน</h1>
     <div class="form-group">
         <label style="font-size: 25px" class="col-form-label" for="userID_text">รหัสนักศึกษา</label>
-        <input id="stdID" style="font-size: 25px" type="number" ng-model="stdID" class="form-control" id="userID_text" placeholder="รหัสนักศึกษา">
+        <input  style="font-size: 25px" type="number" ng-model="stdID" class="form-control" id="userID_text" placeholder="รหัสนักศึกษา">
     </div>
     <div class="form-group">
         <label style="font-size: 25px" class="col-form-label" for="firstname_text">ชื่อ</label>
-        <input id="stdFirstName" style="font-size: 25px" type="text" ng-model="stdFirstname" class="form-control" id="firstname_text" placeholder="ชื่อ">
+        <input style="font-size: 25px" type="text" ng-model="stdFirstName" class="form-control" id="firstname_text" placeholder="ชื่อ">
     </div>
     <div class="form-group">
         <label style="font-size: 25px" class="col-form-label" for="lastname_text">นามสกุล</label>
-        <input id="stdLastName" style="font-size: 25px" type="text" ng-model="stdLastname" class="form-control" id="lastname_text" placeholder="นามสกุล">
+        <input style="font-size: 25px" type="text" ng-model="stdLastName" class="form-control" id="lastname_text" placeholder="นามสกุล">
     </div>
         <button ng-click="sendREG()" type="button" class="btn btn-primary btn-sm" style="margin-top: 5%;font-size: 25px">ยืนยัน</button>
             </div>
@@ -40,7 +40,6 @@
             </div>
         </div>
     </div>
-
 </form>
 
 </body>
