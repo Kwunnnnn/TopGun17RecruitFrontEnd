@@ -1,9 +1,11 @@
     var myApp = angular.module('myApp',[]);
+
+    var address = "http://tg-2017.herokuapp.com";
     myApp.controller('RegController',function ($scope, $http) {
         $scope.sendREG = function () {
             var user = {user_id: $scope.stdID, first_name: $scope.stdFirstName, last_name: $scope.stdLastName};
             console.log(user);
-            $http.post("http://172.20.40.172:3000/user/create", angular.toJson(user), {
+            $http.post(address + "/user/create", angular.toJson(user), {
                 transformRequest: angular.identity,
             }).then(function successCallback(response) {
                 var data = response.data;
@@ -21,7 +23,7 @@
         $scope.login = function() {
             var user_id = $scope.userID;
             console.log(user_id);
-            $http.get("http://172.20.40.172:3000/user/"+user_id,{
+            $http.get(address + "/user/"+user_id,{
                 transformRequest: angular.identity,
             }).then(function successCallback(response) {
                 var data = response.data;
@@ -39,7 +41,7 @@
 
     myApp.controller('QuestionController',function ($scope, $http) {
         var user_id = localStorage.getItem('user_id');
-        $http.get("http://172.20.40.172:3000/problem", {
+        $http.get(address + "/problem", {
         }).then(function successCallback(response) {
             $scope.questions = response.data;
             console.log($scope.questions);
@@ -66,7 +68,7 @@
 
     myApp.controller('ProblemController',function ($scope, $http) {
         $scope.showFile = true;
-        $http.get("http://172.20.40.172:3000/problem/" + sessionStorage.getItem('id'), {
+        $http.get(address + "/problem/" + sessionStorage.getItem('id'), {
         }).then(function successCallback(response) {
             $scope.problem = response.data;
             if($scope.problem.problems_file === ""){
@@ -79,7 +81,7 @@
         $scope.submit = function () {
             var problem_solve = {problem_id: $scope.problem._id, user_id: localStorage.getItem('user_id')};
             if($scope.answer === $scope.problem.problems_result){
-                $http.patch("http://172.20.40.172:3000/problem/answer", angular.toJson(problem_solve), {
+                $http.patch(address + "/problem/answer", angular.toJson(problem_solve), {
                 }).then(function successCallback(response) {
                     window.location.href = "question.html";
                 }, function errorCallback(response) {
@@ -92,6 +94,49 @@
         }
         
         
+
+    });
+
+    myApp.controller('ScoreboardController',function ($scope,$http) {
+        $scope.per = [{user_id: '5', status: [], score: 0}];
+        var pro = {};
+        var sum = 0;
+        var check = false;
+        $http.get(address + "/problem",{
+        }).then(function successCallback (response) {
+            $scope.NumProblem = response.data;
+            $http.get(address + "/user",{
+            }).then(function successCallback (response) {
+                $scope.numPerson = response.data;
+                for(var i = 0; i < $scope.numPerson.length; i++) {
+                    $scope.numPerson[i].status = [];
+                    $scope.numPerson[i].score = 0;
+                    for(var j = 0; j < $scope.NumProblem.length; j++) {
+                        pro = $scope.NumProblem[j];
+                        $scope.numPerson[i].status[j] = false;
+                        if(typeof pro.user_id_solved !== 'undefined'){
+                            for(var k = 0; k < pro.user_id_solved.length; ++k){
+                                if($scope.numPerson[i].user_id == pro.user_id_solved[k]) {
+                                    $scope.numPerson[i].status[j] = true;
+                                    $scope.numPerson[i].score += parseInt(pro.problems_score);
+                                }
+                            }
+                        }
+                    }
+                }
+            }),function errorCallback (response) {
+                console.log(response.data);
+            }
+
+        }),function errorCallback (response) {
+            console.log(response.data);
+        }
+
+
+
+
+
+
 
     });
 

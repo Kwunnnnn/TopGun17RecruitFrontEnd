@@ -11,13 +11,13 @@
 
 <body ng-app = "myApp" ng-controller="QuestionController">
 <h1 style="margin-left: 3%;margin-top: 2%">Challenges</h1>
-<div ng-repeat="question in questions" class="border" style="margin-left: 2%">
+<div ng-repeat="question in questions" class="border" style="margin-left: 2%;margin-top: 3%">
     <div class="row">
         <div class="col-2">
             <img ng-show="question.solved" style="margin-bottom: 3%" src="img/check.png" alt="Check"><span style="color: black;font-size: 30px;margin-left: 4%">Problem {{$index + 1}}</span>
         </div>
     </div>
-    <div class="row" style="margin-top: 3%">
+    <div class="row" style="margin-top: 3%;;">
         <div class="col-6">
             <span id="succer_num" style="color: black;font-size: 20px;">Success Number: {{0 + question.user_id_solved.length}}</span> <span id="score" style="margin-left: 4%;color: black;font-size: 20px">Score:{{question.problems_score}}</span>
         </div>
