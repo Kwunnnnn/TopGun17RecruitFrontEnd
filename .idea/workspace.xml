@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b15a8f03-a364-45c6-a58c-1ea7470040e1" name="Default" comment="fix score">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoreboard.html" afterPath="$PROJECT_DIR$/scoreboard.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -87,8 +86,8 @@
       <file leaf-file-name="scoreboard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scoreboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="30" column="54" lean-forward="false" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+            <state relative-caret-position="138">
+              <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -350,7 +349,7 @@
       <workItem from="1509801468888" duration="15815000" />
       <workItem from="1509824587021" duration="8000" />
       <workItem from="1509874508947" duration="13043000" />
-      <workItem from="1510049922282" duration="442000" />
+      <workItem from="1510049922282" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1509888361197</created>
@@ -373,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510050193536</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix score">
+      <created>1510050370742</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1510050370742</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42059000" />
+    <option name="totallyTimeSpent" value="42221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -410,7 +416,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
     <MESSAGE value="sort by user_id" />
-    <option name="LAST_COMMIT_MESSAGE" value="sort by user_id" />
+    <MESSAGE value="fix score" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix score" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -818,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scoreboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="30" column="54" lean-forward="false" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        <state relative-caret-position="138">
+          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding />
         </state>
       </provider>
