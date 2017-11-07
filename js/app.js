@@ -119,6 +119,7 @@
                                 if($scope.numPerson[i].user_id == pro.user_id_solved[k]) {
                                     $scope.numPerson[i].status[j] = true;
                                     $scope.numPerson[i].score += parseInt(pro.problems_score);
+                                    break;
                                 }
                             }
                         }

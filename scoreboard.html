@@ -28,7 +28,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="user in numPerson | orderBy: 'user_id'">
+    <tr ng-repeat="user in numPerson | orderBy: 'score'">
         <th scope="row">{{"0" + user.user_id}}</th>
         <td ng-repeat="stat in user.status track by $index"><img ng-show="stat" src="img/check.png"> <img ng-show="!stat" src="img/error.png"> </td>
         <td>{{user.score}}</td>
